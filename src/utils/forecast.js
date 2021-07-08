@@ -13,7 +13,7 @@ const forecast = (long, lat, location, callback) => {
         } else if(body.error) {
             callback('Unable to sourch forecast', undefined)
         } else {
-            callback(undefined,`${body.current.weather_descriptions[0]}. It is currently ${body.current.temperature}C outside. It feels like ${body.current.feelslike}C `)
+            callback(undefined,`${body.current.weather_descriptions[0]}. It is currently ${body.current.temperature}C outside. It feels like ${body.current.feelslike}C. The humidity is ${body.current.humidity}%. `)
         }
     })
 }
